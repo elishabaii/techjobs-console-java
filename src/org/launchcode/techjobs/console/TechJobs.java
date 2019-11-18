@@ -110,7 +110,53 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-
+        for (HashMap<String, String> item : someJobs) {
+            for (String key : item.keySet()) {
+                System.out.println("------------------------------------------------");
+                System.out.println("Iterating or looping map using java5 foreach loop");
+                System.out.println("key: " + key + " value: " + item.get(key));
+            }
+        }
         System.out.println("printJobs is not implemented yet");
+
+// all of my for loop examples--including nested
+        /*        Integer i = 0;
+        for (String choiceKey : choices.keySet()) {
+            choiceKeys[i] = choiceKey;
+            i++;
+        }*/
+        /* for (String item : results) {
+                        System.out.println(item);
+                    }
+                    */
+        /*  for (Integer j = 0; j < choiceKeys.length; j++) {
+                System.out.println("" + j + " - " + choices.get(choiceKeys[j]));
+            }
+
+         */
+        /*
+        ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+
+        for (HashMap<String, String> row : allJobs) {
+
+            String aValue = row.get(column);
+
+            if (aValue.contains(value)) {
+                jobs.add(row);
+            }
+        }
+         */
+        /*
+             for (CSVRecord record : records) {
+                HashMap<String, String> newJob = new HashMap<>();
+
+                for (String headerLabel : headers) {
+                    newJob.put(headerLabel, record.get(headerLabel));
+                }
+
+                allJobs.add(newJob);
+            }
+         */
+
     }
 }
