@@ -112,12 +112,13 @@ public class TechJobs {
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
         for (HashMap<String, String> item : someJobs) {
             for (String key : item.keySet()) {
-                System.out.println("------------------------------------------------");
-                System.out.println("Iterating or looping map using java5 foreach loop");
-                System.out.println("key: " + key + " value: " + item.get(key));
+               // System.out.println("------------------------------------------------");
+                //System.out.println("Iterating or looping map using java5 foreach loop");
+                System.out.println( key + ": " + item.get(key));
             }
+            System.out.println("************************");
         }
-        System.out.println("printJobs is not implemented yet");
+        //System.out.println("printJobs is not implemented yet");
 
 // all of my for loop examples--including nested
         /*        Integer i = 0;
