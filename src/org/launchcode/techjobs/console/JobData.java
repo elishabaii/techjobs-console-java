@@ -96,8 +96,8 @@ public class JobData {
                 // System.out.println("------------------------------------------------");
                 //System.out.println("Iterating or looping map using java5 foreach loop");
                 String aValue = row.get(key);
-               // aValue = aValue.toLowerCase();
-                if (aValue.contains(value)) {
+                //aValue = aValue.toLowerCase();
+                if (aValue.toLowerCase().contains(value.toLowerCase())) {
                  jobs.add(row);
                  //System.out.println(key + ":Prior to break " + row.get(key));
                  break;
