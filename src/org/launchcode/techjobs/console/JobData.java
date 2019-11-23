@@ -57,12 +57,12 @@ public class JobData {
     /**
      * Returns results of search the jobs data by key/value, using
      * inclusion of the search term.
-     *
+     * <p>
      * For example, searching for employer "Enterprise" will include results
      * with "Enterprise Holdings, Inc".
      *
-     * @param column   Column that should be searched.
-     * @param value Value of teh field to search for
+     * @param column Column that should be searched.
+     * @param value  Value of teh field to search for
      * @return List of all jobs matching the criteria
      */
     public static ArrayList<HashMap<String, String>> findByColumnAndValue(String column, String value) {
@@ -93,27 +93,13 @@ public class JobData {
 
         for (HashMap<String, String> row : allJobs) {
             for (String key : row.keySet()) {
-                // System.out.println("------------------------------------------------");
-                //System.out.println("Iterating or looping map using java5 foreach loop");
                 String aValue = row.get(key);
-                //aValue = aValue.toLowerCase();
                 if (aValue.toLowerCase().contains(value.toLowerCase())) {
-                 jobs.add(row);
-                 //System.out.println(key + ":Prior to break " + row.get(key));
-                 break;
-                    //System.out.println(key + ":Prior to break " + row.get(key));
-                 //System.out.println(key + ":after to break" + row.get(key));
+                    jobs.add(row);
+                    break;
                 }
-                //System.out.println(key + ": " + row.get(key));
             }
-
-            //String aValue = row.get(column);
-
-            //if (aValue.contains(value)) {
-               // jobs.add(row);
-           // }
         }
-
         return jobs;
     }
 

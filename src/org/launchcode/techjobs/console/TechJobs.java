@@ -11,7 +11,7 @@ public class TechJobs {
 
     private static Scanner in = new Scanner(System.in);
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         // Initialize our field map with key/name pairs
         HashMap<String, String> columnChoices = new HashMap<>();
@@ -103,7 +103,7 @@ public class TechJobs {
                 validChoice = true;
             }
 
-        } while(!validChoice);
+        } while (!validChoice);
 
         return choiceKeys[choiceIdx];
     }
@@ -112,57 +112,12 @@ public class TechJobs {
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
         if (someJobs.size() == 0) {
             System.out.println("No results");
-        }
-        else {
+        } else {
             for (HashMap<String, String> item : someJobs) {
                 for (String key : item.keySet()) {
-                    // System.out.println("------------------------------------------------");
-                    //System.out.println("Iterating or looping map using java5 foreach loop");
-                    System.out.println(key + ": " + item.get(key));
                 }
                 System.out.println("************************");
             }
         }
-        //System.out.println("printJobs is not implemented yet");
-
-// all of my for loop examples--including nested
-        /*        Integer i = 0;
-        for (String choiceKey : choices.keySet()) {
-            choiceKeys[i] = choiceKey;
-            i++;
-        }*/
-        /* for (String item : results) {
-                        System.out.println(item);
-                    }
-                    */
-        /*  for (Integer j = 0; j < choiceKeys.length; j++) {
-                System.out.println("" + j + " - " + choices.get(choiceKeys[j]));
-            }
-
-         */
-        /*
-        ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
-
-        for (HashMap<String, String> row : allJobs) {
-
-            String aValue = row.get(column);
-
-            if (aValue.contains(value)) {
-                jobs.add(row);
-            }
-        }
-         */
-        /*
-             for (CSVRecord record : records) {
-                HashMap<String, String> newJob = new HashMap<>();
-
-                for (String headerLabel : headers) {
-                    newJob.put(headerLabel, record.get(headerLabel));
-                }
-
-                allJobs.add(newJob);
-            }
-         */
-
     }
 }
