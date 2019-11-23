@@ -92,6 +92,15 @@ public class JobData {
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
         for (HashMap<String, String> row : allJobs) {
+            for (String key : row.keySet()) {
+                // System.out.println("------------------------------------------------");
+                //System.out.println("Iterating or looping map using java5 foreach loop");
+                String aValue = row.get(key);
+                if (aValue.contains(value)) {
+                 jobs.add(row);
+                }
+                System.out.println(key + ": " + row.get(key));
+            }
 
             //String aValue = row.get(column);
 
