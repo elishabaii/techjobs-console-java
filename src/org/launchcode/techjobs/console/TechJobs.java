@@ -115,6 +115,7 @@ public class TechJobs {
         } else {
             for (HashMap<String, String> item : someJobs) {
                 for (String key : item.keySet()) {
+                    System.out.println(key + ": " + item.get(key));
                 }
                 System.out.println("************************");
             }
